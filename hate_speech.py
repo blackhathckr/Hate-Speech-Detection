@@ -46,7 +46,7 @@ model = DecisionTreeClassifier()
 model.fit(X_train,y_train)
 
 
-def hate_speech_detection_gui():
+def hate_speech_detection_webapp():
     import streamlit as stlit
     stlit.title("Hate Speech Detection")
     user = stlit.text_area("Enter a Tweet: ")
@@ -57,4 +57,4 @@ def hate_speech_detection_gui():
         data = cv.transform([tweet]).toarray()
         twt = model.predict(tweet)
         stlit.title(str(twt))
-hate_speech_detection_gui()
+hate_speech_detection_webapp()
