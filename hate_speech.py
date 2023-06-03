@@ -49,7 +49,7 @@ model.fit(X_train,y_train)
 def hate_speech_detection_gui():
     import streamlit as stlit
     stlit.title("Hate Speech Detection")
-    user = stlit.text_area("Enter any Tweet: ")
+    user = stlit.text_area("Enter a Tweet: ")
     if len(user) < 1:
         stlit.write("  ")
     else:
