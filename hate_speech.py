@@ -53,8 +53,8 @@ def hate_speech_detection_gui():
     if len(user) < 1:
         stlit.write("  ")
     else:
-        sample = user
-        data = cv.transform([sample]).toarray()
-        twt = model.predict(data)
+        tweet = user
+        data = cv.transform([tweet]).toarray()
+        twt = model.predict(tweet)
         stlit.title(str(twt))
 hate_speech_detection_gui()
